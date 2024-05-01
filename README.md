@@ -66,7 +66,7 @@ There are three ways to configure how to containerize a module:
               BP_NODE_RUN_SCRIPTS: ""
       ```
 
-    **type**: Mention the buildpack(s) (comma-separated if multiple).  
+    **type** (optional): Mention the buildpack(s) (comma-separated if multiple).  
     There are certain keywords which when mentioned in `type` key of buildpack which are parsed as:
 
     |        Keyword    |      Parsed to                                               |
@@ -75,7 +75,7 @@ There are three ways to configure how to containerize a module:
     | *java*            | gcr.io/paketo-buildpacks/java                                |
     | *sap-machine*     | gcr.io/paketo-buildpacks/sap-machine                         |
 
-    **builder**: Specify the builder type.  
+    **builder** (optional): Specify the builder type.  
     There are certain keywords which when mentioned in `builder` key of buildpack which are parsed as:
 
     |     Keyword       |      Parsed to                                               |
