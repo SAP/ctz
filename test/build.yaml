@@ -17,4 +17,4 @@ modules:
   - name: bookshop-hana-deployer
     build-parameters:
       commands:
-        - 'pack build bookshop-hana-deployer --path db --buildpack nodejs --builder paketobuildpacks/builder:base'
+        - 'pack build bookshop-hana-deployer --path db --builder paketobuildpacks/builder:base'
