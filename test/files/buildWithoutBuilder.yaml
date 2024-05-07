@@ -1,0 +1,20 @@
+repository: docker.io/username
+tag: latest
+before-all:
+  - npx cds build --production
+modules:
+  - name: bookshop-approuter
+    tag: v1
+    build-parameters:
+      buildpack:
+        type: nodejs
+        path: app
+        env:
+          BP_NODE_RUN_SCRIPTS: ""
+  - name: dockerfile-image
+    build-parameters:
+      dockerfile: dockerfiles/sample.Dockerfile
+  - name: bookshop-hana-deployer
+    build-parameters:
+      commands:
+        - 'pack build bookshop-hana-deployer --buildpack gcr.io/paketo-buildpacks/nodejs --path db'

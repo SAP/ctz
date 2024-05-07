@@ -7,6 +7,7 @@ modules:
     tag: v1
     build-parameters:
       buildpack:
+        builder: builder-jammy-base
         type: nodejs
         path: app
         env:
@@ -17,4 +18,4 @@ modules:
   - name: bookshop-hana-deployer
     build-parameters:
       commands:
-        - 'pack build bookshop-hana-deployer --path db --builder paketobuildpacks/builder:base'
+        - 'pack build bookshop-hana-deployer --buildpack gcr.io/paketo-buildpacks/nodejs --path db --builder paketobuildpacks/builder-jammy-base'
