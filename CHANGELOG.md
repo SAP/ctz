@@ -5,10 +5,6 @@ All notable changes to this project will be documented in this file.
 
 ## Version 0.2.0
 
-### Added
-
-- Added buildpackless builders to knows builders. 
-
 ### Fixed
 
 - Buildpack type is now optional.

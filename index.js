@@ -4,24 +4,28 @@ const { commandsDescription } = require('./lib/constants')
 const { processModule } = require('./lib/execute')
 
 const shortcuts = {
-    h: "--help"
+    h: "--help",
+    v: "--version"
 }
-const arguments = process.argv[2]
 
-switch (arguments) {
+const cmd = process.argv[2]
+if (cmd in shortcuts) {
+    cmd = shortcuts[cmd]
+}
+
+switch (cmd) {
 
     case (`${shortcuts.h}`):
-    case (`-${shortcuts.h[0]}`):
-        {
-            console.log(commandsDescription);
-        }
+        console.log(commandsDescription);
         break;
-
+    case (`${shortcuts.v}`):
+        console.log(require('./package.json').version);
+        break;
     default:
         {
-            if (arguments) {
+            if (cmd) {
                 // process.argv[2] is the file path given through cli
-                processModule(arguments)
+                processModule(cmd)
             }
             else {
                 console.log(commandsDescription)
