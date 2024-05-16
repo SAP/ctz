@@ -99,7 +99,7 @@ There are three ways to configure how to containerize a module:
 
     `Note`: `pack` CLI tool is required for this option. 
 
-3. `dockerfile`: Dockerfile provided by the user is used.
+2. `dockerfile`: Dockerfile provided by the user is used.
 
     Example:
     ```yaml
@@ -109,7 +109,7 @@ There are three ways to configure how to containerize a module:
         dockerfile: <path to a docker file>
     ```
 
-4. `commands`: List of commands provided by the user are executed to build the image.
+3. `commands`: List of commands provided by the user are executed to build the image.
 
     Example:
     ```yaml
