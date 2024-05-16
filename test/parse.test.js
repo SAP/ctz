@@ -8,8 +8,8 @@ function readJSON(filePath) {
 describe('parse yaml', () => {
   test('test yaml parsing', () => {
     expect(parse_yaml("/test/files/build.yaml")).toEqual(readJSON(__dirname + "/expected/build.json"))
-  });
-});
+  })
+})
 
 describe('parse yaml without builder', () => {
   test('test yaml parsing without builder', () => {
