@@ -79,6 +79,7 @@ There are three ways to configure how to containerize a module:
     | *sap-machine*     | gcr.io/paketo-buildpacks/sap-machine                         |
    
     </br>
+
     **builder**: Specify the builder type.  
     There are certain keywords which when mentioned in `builder` key of buildpack which are parsed as:  
 
@@ -90,8 +91,10 @@ There are three ways to configure how to containerize a module:
     | *builder-jammy-base* | paketobuildpacks/builder-jammy-base                       |
     | *builder-jammy-full* | paketobuildpacks/builder-jammy-full                       |
 
-    <br />
-    **path**: Path of the module to be containerized.
+    </br>
+
+    **path** : Path of the module to be containerized.
+
     **env**: Environment variables (key-value pairs).
 
     `Note`: `pack` CLI tool is required for this option. 
