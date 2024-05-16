@@ -33,6 +33,46 @@
             ]
         },
         {
+            "name": "book-srv",
+            "tag": "latest",
+            "buildCmd": [
+                [
+                    "pack",
+                    "build",
+                    "book-srv",
+                    "--path",
+                    ".",
+                    [
+                        "--buildpack",
+                        "gcr.io/paketo-buildpacks/sap-machine"
+                    ],
+                    [
+                        "--buildpack",
+                        "gcr.io/paketo-buildpacks/java"
+                    ],
+                    "--builder",
+                    "paketobuildpacks/builder-jammy-buildpackless-base",
+                    "--env",
+                    "SPRING_PROFILES_ACTIVE=cloud",
+                    "--env",
+                    "BP_JVM_VERSION=17",
+                    "--env",
+                    "BP_MAVEN_BUILT_ARTIFACT=srv/target/book-exec.jar"
+                ]
+            ],
+            "tagCmd": [
+                "docker",
+                "tag",
+                "book-srv:latest",
+                "docker.io/username/book-srv:latest"
+            ],
+            "pushCmd": [
+                "docker",
+                "push",
+                "docker.io/username/book-srv:latest"
+            ]
+        },
+        {
             "name": "dockerfile-image",
             "tag": "latest",
             "buildCmd": [

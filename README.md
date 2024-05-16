@@ -86,10 +86,12 @@ There are three ways to configure how to containerize a module:
     </br>
 
 
-    |     Keyword       |      Parsed to                                               |
-    |-------------------|--------------------------------------------------------------|
-    | *builder-jammy-base* | paketobuildpacks/builder-jammy-base                       |
-    | *builder-jammy-full* | paketobuildpacks/builder-jammy-full                       |
+    |     Keyword                        |      Parsed to                                            |
+    |------------------------------------|-----------------------------------------------------------|
+    | *builder-jammy-base*               | paketobuildpacks/builder-jammy-base                       |
+    | *builder-jammy-buildpackless-base* | paketobuildpacks/builder-jammy-full                       |
+    | *builder-jammy-full*               | paketobuildpacks/builder-jammy-base                       |
+    | *builder-jammy-buildpackless-full* | paketobuildpacks/builder-jammy-full                       |
 
     </br>
 

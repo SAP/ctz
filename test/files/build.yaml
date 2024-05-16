@@ -12,6 +12,16 @@ modules:
         path: app
         env:
           BP_NODE_RUN_SCRIPTS: ""
+  - name: book-srv
+    build-parameters:
+      buildpack:
+        type: sap-machine, java
+        builder: builder-jammy-buildpackless-base
+        path: .
+        env:
+          SPRING_PROFILES_ACTIVE: cloud
+          BP_JVM_VERSION: 17
+          BP_MAVEN_BUILT_ARTIFACT: srv/target/book-exec.jar
   - name: dockerfile-image
     build-parameters:
       dockerfile: dockerfiles/sample.Dockerfile
