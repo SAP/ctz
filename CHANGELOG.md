@@ -3,6 +3,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Version 0.2.2 - 2024-06-19
+
+### Added
+
+- Added repository option
+
 ## Version 0.2.1 - 2024-05-16
 
 ### Fixed

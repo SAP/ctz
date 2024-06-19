@@ -11,6 +11,12 @@ describe('parse yaml', () => {
   })
 })
 
+describe('parse yaml with --repository option', () => {
+  test('test yaml parsing', () => {
+    expect(parse_yaml("/test/files/build.yaml", 'my-repository')).toEqual(readJSON(__dirname + "/expected/repositoryOption.json"))
+  })
+})
+
 describe('parse yaml without builder', () => {
   test('test yaml parsing without builder', () => {
     expect(parse_yaml("/test/files/buildWithoutBuilder.yaml")).toEqual(readJSON(__dirname + "/expected/buildWithoutBuilder.json"))

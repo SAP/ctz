@@ -25,6 +25,7 @@ Build tool to containerize cloud applications.
      -p |  --push      pushes the images to specified repository
      -h |  --help      get detailed usage information
      -v |  --version   get version of the package
+     --repository      repository to push the images to
 
  EXAMPLES
     ctz build.yaml

@@ -1,12 +1,12 @@
 {
   "name": "ctz",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
       "name": "ctz",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "license": "SEE LICENSE IN LICENSE",
       "dependencies": {
         "js-yaml": "^4.1.0"

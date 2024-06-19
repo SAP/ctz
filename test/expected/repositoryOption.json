@@ -1,0 +1,139 @@
+{
+    "commands": [
+        {
+            "name": "bookshop-approuter",
+            "tag": "v1",
+            "buildCmd": [
+                [
+                    "pack",
+                    "build",
+                    "bookshop-approuter",
+                    "--path",
+                    "app",
+                    [
+                        "--buildpack",
+                        "gcr.io/paketo-buildpacks/nodejs"
+                    ],
+                    "--builder",
+                    "paketobuildpacks/builder-jammy-base",
+                    "--env",
+                    "BP_NODE_RUN_SCRIPTS=\"\""
+                ]
+            ],
+            "tagCmd": [
+                "docker",
+                "tag",
+                "bookshop-approuter:v1",
+                "my-repository/bookshop-approuter:v1"
+            ],
+            "pushCmd": [
+                "docker",
+                "push",
+                "my-repository/bookshop-approuter:v1"
+            ]
+        },
+        {
+            "name": "book-srv",
+            "tag": "latest",
+            "buildCmd": [
+                [
+                    "pack",
+                    "build",
+                    "book-srv",
+                    "--path",
+                    ".",
+                    [
+                        "--buildpack",
+                        "gcr.io/paketo-buildpacks/sap-machine"
+                    ],
+                    [
+                        "--buildpack",
+                        "gcr.io/paketo-buildpacks/java"
+                    ],
+                    "--builder",
+                    "paketobuildpacks/builder-jammy-buildpackless-base",
+                    "--env",
+                    "SPRING_PROFILES_ACTIVE=cloud",
+                    "--env",
+                    "BP_JVM_VERSION=17",
+                    "--env",
+                    "BP_MAVEN_BUILT_ARTIFACT=srv/target/book-exec.jar"
+                ]
+            ],
+            "tagCmd": [
+                "docker",
+                "tag",
+                "book-srv:latest",
+                "my-repository/book-srv:latest"
+            ],
+            "pushCmd": [
+                "docker",
+                "push",
+                "my-repository/book-srv:latest"
+            ]
+        },
+        {
+            "name": "dockerfile-image",
+            "tag": "latest",
+            "buildCmd": [
+                [
+                    "docker",
+                    "build",
+                    "-t",
+                    "dockerfile-image:latest",
+                    "-f",
+                    "dockerfiles/sample.Dockerfile",
+                    "."
+                ]
+            ],
+            "tagCmd": [
+                "docker",
+                "tag",
+                "dockerfile-image:latest",
+                "my-repository/dockerfile-image:latest"
+            ],
+            "pushCmd": [
+                "docker",
+                "push",
+                "my-repository/dockerfile-image:latest"
+            ]
+        },
+        {
+            "name": "bookshop-hana-deployer",
+            "tag": "latest",
+            "buildCmd": [
+                [
+                    "pack",
+                    "build",
+                    "bookshop-hana-deployer",
+                    "--buildpack",
+                    "gcr.io/paketo-buildpacks/nodejs",
+                    "--path",
+                    "db",
+                    "--builder",
+                    "paketobuildpacks/builder-jammy-base"
+                ]
+            ],
+            "tagCmd": [
+                "docker",
+                "tag",
+                "bookshop-hana-deployer:latest",
+                "my-repository/bookshop-hana-deployer:latest"
+            ],
+            "pushCmd": [
+                "docker",
+                "push",
+                "my-repository/bookshop-hana-deployer:latest"
+            ]
+        }
+    ],
+    "before_all": [
+        [
+            "npx",
+            "cds",
+            "build",
+            "--production"
+        ]
+    ],
+    "repository": "my-repository"
+}
