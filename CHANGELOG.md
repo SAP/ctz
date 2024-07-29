@@ -3,6 +3,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Version 0.2.3 - 2024-07-30
+
+### Fixed
+
+- Pack command respects image tag
+
 ## Version 0.2.2 - 2024-06-19
 
 ### Added
