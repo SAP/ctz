@@ -7,7 +7,7 @@
                 [
                     "pack",
                     "build",
-                    "bookshop-approuter",
+                    "bookshop-approuter:v1",
                     "--path",
                     "app",
                     [
@@ -39,7 +39,7 @@
                 [
                     "pack",
                     "build",
-                    "book-srv",
+                    "book-srv:latest",
                     "--path",
                     ".",
                     [

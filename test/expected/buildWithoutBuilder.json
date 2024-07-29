@@ -7,7 +7,7 @@
                 [
                     "pack",
                     "build",
-                    "bookshop-approuter",
+                    "bookshop-approuter:v1",
                     "--path",
                     "app",
                     [
