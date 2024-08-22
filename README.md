@@ -89,16 +89,12 @@ There are three ways to configure how to containerize a module:
     </br>
 
 
-    |     Keyword                        |      Parsed to                                                     |
-    |------------------------------------|--------------------------------------------------------------------|
-    | *builder-jammy-base*               | paketobuildpacks/builder-jammy-base                                |
-    | *builder-jammy-buildpackless-base* | paketobuildpacks/builder-jammy-buildpackless-base                  |
-    | *builder-jammy-full*               | paketobuildpacks/builder-jammy-full                                |
-    | *builder-jammy-buildpackless-full* | paketobuildpacks/builder-jammy-buildpackless-full                  |
-    | *unified-runtime/jammy*            | unified-runtime.common.repositories.cloud.sap/builder/jammy        |
-    | *unified-runtime/noble*            | unified-runtime.common.repositories.cloud.sap/builder/noble        |
-    | *proxy-unified-runtime/jammy*      | proxy-unified-runtime-dmz.int.repositories.cloud.sap/builder/jammy |
-    | *proxy-unified-runtime/noble*      | proxy-unified-runtime-dmz.int.repositories.cloud.sap/builder/noble |
+    |     Keyword                        |      Parsed to                                       |
+    |------------------------------------|------------------------------------------------------|
+    | *builder-jammy-base*               | paketobuildpacks/builder-jammy-base                  |
+    | *builder-jammy-buildpackless-base* | paketobuildpacks/builder-jammy-buildpackless-base    |
+    | *builder-jammy-full*               | paketobuildpacks/builder-jammy-full                  |
+    | *builder-jammy-buildpackless-full* | paketobuildpacks/builder-jammy-buildpackless-full    |
 
 
     </br>

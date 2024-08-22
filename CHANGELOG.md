@@ -3,11 +3,6 @@
 
 All notable changes to this project will be documented in this file.
 
-## Version 0.3.0 - 2024-08-31
-
-### Added
-
-- Added support for unified-runtime
 
 ## Version 0.2.3 - 2024-07-30
 
