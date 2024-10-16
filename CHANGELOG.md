@@ -3,6 +3,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Version 0.2.4 - 2024-10-16
+
+### Fixed
+
+- Fixed Windows CLI issue
+
 ## Version 0.2.3 - 2024-07-30
 
 ### Fixed
