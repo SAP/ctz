@@ -26,6 +26,7 @@ Build tool to containerize cloud applications.
      -h |  --help      get detailed usage information
      -v |  --version   get version of the package
      --repository      repository to push the images to
+     --modules         list the modules image has to be built for
 
  EXAMPLES
     ctz build.yaml
@@ -33,6 +34,8 @@ Build tool to containerize cloud applications.
     ctz build.yaml -l
     ctz build.yaml --push
     ctz build.yaml -p --log
+    ctz build.yaml --modules=mod1,mod2
+    ctz build.yaml --repository=docker.io/username
 ```
 
 ## Configuration
@@ -57,6 +60,7 @@ There are three ways to configure how to containerize a module:
       ```yaml
       modules:
       - name: bookshop-srv
+        tag: v1
         build-parameters:
           buildpack:
             type: nodejs
@@ -110,6 +114,7 @@ There are three ways to configure how to containerize a module:
     ```yaml
     modules:
     - name: bookshop-srv
+      tag: latest
       build-parameters:
         dockerfile: <path to a docker file>
     ```
