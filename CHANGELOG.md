@@ -3,6 +3,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Version 0.2.6 - 2025-01-28
+
+### Fixed
+
+- Updated the cli manual
+
 ## Version 0.2.5 - 2024-11-22
 
 ### Added
