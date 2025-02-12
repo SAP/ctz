@@ -28,4 +28,4 @@ modules:
   - name: bookshop-hana-deployer
     build-parameters:
       commands:
-        - 'pack build bookshop-hana-deployer --buildpack gcr.io/paketo-buildpacks/nodejs --path db --builder paketobuildpacks/builder-jammy-base'
+        - 'pack build bookshop-hana-deployer --buildpack paketo-buildpacks/nodejs --path db --builder paketobuildpacks/builder-jammy-base'

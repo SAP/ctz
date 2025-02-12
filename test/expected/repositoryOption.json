@@ -12,7 +12,7 @@
                     "app",
                     [
                         "--buildpack",
-                        "gcr.io/paketo-buildpacks/nodejs"
+                        "paketo-buildpacks/nodejs"
                     ],
                     "--builder",
                     "paketobuildpacks/builder-jammy-base",
@@ -44,11 +44,11 @@
                     ".",
                     [
                         "--buildpack",
-                        "gcr.io/paketo-buildpacks/sap-machine"
+                        "paketo-buildpacks/sap-machine"
                     ],
                     [
                         "--buildpack",
-                        "gcr.io/paketo-buildpacks/java"
+                        "paketo-buildpacks/java"
                     ],
                     "--builder",
                     "paketobuildpacks/builder-jammy-buildpackless-base",
@@ -107,7 +107,7 @@
                     "build",
                     "bookshop-hana-deployer",
                     "--buildpack",
-                    "gcr.io/paketo-buildpacks/nodejs",
+                    "paketo-buildpacks/nodejs",
                     "--path",
                     "db",
                     "--builder",

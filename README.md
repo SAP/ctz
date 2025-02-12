@@ -78,12 +78,12 @@ There are three ways to configure how to containerize a module:
 
     |        Keyword    |      Parsed to                                               |
     |-------------------|--------------------------------------------------------------|
-    | *nodejs*          | gcr.io/paketo-buildpacks/nodejs                              |                
-    | *java*            | gcr.io/paketo-buildpacks/java                                |               
-    | *sap-machine*     | gcr.io/paketo-buildpacks/sap-machine                         |
-    | *executable-jar*  | gcr.io/paketo-buildpacks/executable-jar                      |
-    | *spring-boot*     | gcr.io/paketo-buildpacks/spring-boot                         |
-    | *syft*            | gcr.io/paketo-buildpacks/syft                                |
+    | *nodejs*          | paketo-buildpacks/nodejs                              |                
+    | *java*            | paketo-buildpacks/java                                |               
+    | *sap-machine*     | paketo-buildpacks/sap-machine                         |
+    | *executable-jar*  | paketo-buildpacks/executable-jar                      |
+    | *spring-boot*     | paketo-buildpacks/spring-boot                         |
+    | *syft*            | paketo-buildpacks/syft                                |
    
     </br>
 

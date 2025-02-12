@@ -12,7 +12,7 @@
                     "app",
                     [
                         "--buildpack",
-                        "gcr.io/paketo-buildpacks/nodejs"
+                        "paketo-buildpacks/nodejs"
                     ],
                     "--env",
                     "BP_NODE_RUN_SCRIPTS=\"\""
@@ -65,7 +65,7 @@
                     "build",
                     "bookshop-hana-deployer",
                     "--buildpack",
-                    "gcr.io/paketo-buildpacks/nodejs",
+                    "paketo-buildpacks/nodejs",
                     "--path",
                     "db"
                 ]

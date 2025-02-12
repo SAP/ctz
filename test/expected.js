@@ -12,7 +12,7 @@ const desired_output = {
                "app",
                [
                   "--buildpack",
-                  "gcr.io/paketo-buildpacks/nodejs"
+                  "paketo-buildpacks/nodejs"
                ],
                "--builder",
                "paketobuildpacks/builder-jammy-base",
