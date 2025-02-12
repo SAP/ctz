@@ -3,6 +3,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## Version 0.2.7 - 2025-02-12
+
+### Fixed
+
+- Reserved keywords refer to official buildpacks now
+
 ## Version 0.2.6 - 2025-01-28
 
 ### Fixed
