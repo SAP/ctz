@@ -2,6 +2,12 @@
 # Change Log
 
 All notable changes to this project will be documented in this file.
+## Version 0.2.8 - 2025-05-19
+
+### Fixed
+
+ - Exit bug fix
+
 
 ## Version 0.2.7 - 2025-02-12
 
